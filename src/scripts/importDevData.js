@@ -1,12 +1,11 @@
 const fs = require('fs');
 const mongoose = require('mongoose');
-const dotenv = require('dotenv');
-const Tour = require('../models/ExampleModel');
-dotenv.config({path: './config.env'});
+const Customer = require("../models/Customer")
 
-const DB = process.env.DATABASE.replace(
+
+const DB = "mongodb+srv://admin:<password>@e-commercedb.02scqma.mongodb.net/ecommerce?retryWrites=true&w=majority".replace(
     '<PASSWORD>', 
-    process.env.DATABASE_PASSWORD);
+    "Z72Y6sWH75FTecax");
 
 mongoose.connect(DB,{
     useNewUrlParser: true,
@@ -16,12 +15,12 @@ mongoose.connect(DB,{
 })
 .then(() => console.log('DB connection successful'));
 // Read file:
-const tours = JSON.parse(fs.readFileSync(`${__dirname}/../../dev-data/data/tours-simple.json`, `utf-8`));
+const customer = JSON.parse(fs.readFileSync(`${__dirname}/../../data/customers.json`, `utf-8`));
 
 // Import data into DB
 const importData = async()=>{
     try{
-        await Tour.create(tours);
+        await Customer.create(customer);
         console.log("Data Successfully Created");
     }catch(err){
         console.log(err)
@@ -32,7 +31,7 @@ const importData = async()=>{
 // Delete all from DB
 const deleteData = async()=>{
     try{
-        await Tour.deleteMany();
+        await Customer.deleteMany();
         console.log("Data Successfully Deleted"); 
     }catch(err){
         console.log(err);
