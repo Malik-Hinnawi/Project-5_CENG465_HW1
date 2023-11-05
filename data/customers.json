@@ -1,0 +1,70 @@
+[{
+    "customer_id": 1111,
+    "first_name ": "",
+    "last_name": "",
+    "email": "",
+    "mobile": "",
+    "password": "",
+    "addresses": [
+        {
+            "address_name": "Home",
+            "street": "588 5th Street",
+            "city": "Brooklyn",
+            "state": "NY",
+            "country": "United States",
+            "postal_code": 11215
+        },
+        {
+            "address_name": "Work",
+            "street": "1 E. 23rd Street",
+            "city": "New York",
+            "state": "NY",
+            "country": "United States",
+            "postal_code": 10010
+        }
+    ],
+    "wishlist": [
+        {
+            "product_id": 56786
+        },
+        {
+            "product_id": 56786
+        }
+    ],
+    "previous_orders": [
+        {
+            "order_id": 56786
+        },
+        {
+            "order_id": 56786
+        }
+    ],
+    "cart": [
+        {
+            "product_id": "1321313"
+        },
+        {
+            "product_id": "1321313"
+        }
+    ],
+    "latest_viewed": [
+        {
+            "product_id": "1321313"
+        },
+        {
+            "product_id": "1321313"
+        }
+    ],
+    "saved_card": [
+        {
+            "card_number": "",
+            "expiry_date": "MM/YYYY",
+            "cvv": ""
+        }
+    ],
+    "feedbacks" : [
+        {
+            "review_id": 2134
+        }
+    ]
+}]

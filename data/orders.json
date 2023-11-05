@@ -1,0 +1,29 @@
+{
+    "order_id": "4486649",
+    "customer_id": "777",
+    "order_date": "",
+    "status": "",
+    "shipping": {
+        "customer_name": "",
+        "address": "",
+        "mobile": "",
+        "postal_code": "313001",
+        "company_id": ""
+    },
+    "products": [
+        {
+            "product_id": "6449645798",
+            "quantity": 2,
+            "price": 12
+        },
+        {
+            "product_id": "646316554",
+            "quantity": 1,
+            "price": 12
+        }
+    ],
+    "total_price": 36,
+    "order_type": "taksit",
+    "created_date": "",
+    "modified_date": ""
+}
