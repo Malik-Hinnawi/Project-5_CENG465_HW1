@@ -8,15 +8,12 @@ const productSchema = new mongoose.Schema({
     },
     description: {
         type: String,
-        required: true
     },
     brand: {
         type: String,
-        required: true
     },
     photo_id: {
         type: Number,
-        required: true
     },
     quantity: {
         type: Number,
@@ -36,12 +33,10 @@ const productSchema = new mongoose.Schema({
     },
     created_date: {
         type: Date,
-        required: true,
         default: Date.now
     },
     modified_date: {
         type: Date,
-        required: true,
         default: Date.now
     },
     overall_rating: {

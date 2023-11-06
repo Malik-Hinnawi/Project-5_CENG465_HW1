@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 const addressSchema = require('./Address')
-const cardSchema = require("./Card")
 const validator = require('validator');
 
 const customerSchema = new mongoose.Schema({
@@ -41,9 +40,6 @@ const customerSchema = new mongoose.Schema({
         type: [mongoose.Schema.Types.ObjectId],
         ref: 'Product',
         default: []
-    },
-    saved_cards:{
-        type: [cardSchema]
     },
     feedbacks: {
         type: [mongoose.Schema.Types.ObjectId],
