@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 
+const timeValidator = /^([01]?[0-9]|2[0-3]):[0-5][0-9]$/;
+
 const reviewSchema = new mongoose.Schema({
     product_id: {
         type: mongoose.Schema.Types.ObjectId,
@@ -21,11 +23,16 @@ const reviewSchema = new mongoose.Schema({
     },
     date: {
         type: Date,
-        required: true
+        required: true,
+        default: Date.now
     },
     time: {
         type: String,
-        required: true
+        required: true,
+        validate: {
+            validator:  (value) => timeValidator.test(value),
+            message: 'Invalid time format. Please use HH:MM in 24-hour format (e.g., "14:30").'
+        }
     }
 });
 

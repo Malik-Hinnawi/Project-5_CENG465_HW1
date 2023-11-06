@@ -1,29 +1,9 @@
-{
-    "product_id": "6449645798",
+[{
     "name": "Samsung 860 EVO 1 TB Internal",
-    "description": " ",
+    "description": "It is a phone",
     "brand": "Samsung",
     "photo_id": 123213321, 
     "quantity": 5,
     "price": 99,
-    "stock_amount": 12,
-    "feedbacks": [
-        {
-            "customer name": " ",
-            "comment": " ",
-            "created_date": " ",
-            "created_time": "",
-            "rating": 4
-        },
-        {
-            "customer name": " ",
-            "comment": " ",
-            "created_date": " ",
-            "created_time": "",
-            "rating": 4.2
-        }
-    ],
-    "overal_rating": 4.2,
-    "created_date": "",
-    "modified_date": ""
-}
+    "stock_amount": 12
+}]

@@ -19,10 +19,9 @@ const shippingSchema = new mongoose.Schema({
         type: String,
         default: '313001',
     },
-    company_id: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Company', 
-    },
+    company_name: {
+        type: String
+    }
 });
 
 module.exports = shippingSchema;

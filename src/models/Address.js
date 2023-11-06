@@ -18,12 +18,10 @@ const addressSchema = new mongoose.Schema({
     },
     state: {
         type: String,
-        required: [true, 'An address must have a state'],
         trim: true
     },
     country: {
         type: String,
-        required: [true, 'An address must have a country'],
         trim: true
     },
     postal_code: {

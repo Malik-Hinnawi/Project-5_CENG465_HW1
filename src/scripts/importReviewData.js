@@ -1,26 +1,24 @@
 const fs = require('fs');
 const mongoose = require('mongoose');
-const Customer = require("../models/Customer")
+const Review = require("../models/Review")
 
 
 const DB = "mongodb+srv://admin:<password>@e-commercedb.02scqma.mongodb.net/ecommerce?retryWrites=true&w=majority".replace(
-    '<PASSWORD>', 
+    '<password>', 
     "Z72Y6sWH75FTecax");
 
 mongoose.connect(DB,{
     useNewUrlParser: true,
-    useCreateIndex: true,
-    useFindAndModify: false,
     useUnifiedTopology: true
 })
 .then(() => console.log('DB connection successful'));
 // Read file:
-const customer = JSON.parse(fs.readFileSync(`${__dirname}/../../data/customers.json`, `utf-8`));
+const customer = JSON.parse(fs.readFileSync(`${__dirname}/../../data/reviews.json`, `utf-8`));
 
 // Import data into DB
 const importData = async()=>{
     try{
-        await Customer.create(customer);
+        await Review.create(customer);
         console.log("Data Successfully Created");
     }catch(err){
         console.log(err)
@@ -31,7 +29,7 @@ const importData = async()=>{
 // Delete all from DB
 const deleteData = async()=>{
     try{
-        await Customer.deleteMany();
+        await Review.deleteMany();
         console.log("Data Successfully Deleted"); 
     }catch(err){
         console.log(err);

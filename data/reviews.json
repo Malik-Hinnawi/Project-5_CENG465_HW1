@@ -1,9 +1,7 @@
-{
-    "review_id": "6449645798",
-    "product_id": "6449645798",
-    "customer name": " ",
-    "comment": "",
+[{
+    "product_id": "65488eeab9cb848a6d277104",
+    "customer_name": "Test",
+    "comment": "This product is amazing",
     "rating": 4.1,
-    "date": "",
-    "time": ""
-}
+    "time": "14:30"
+}]

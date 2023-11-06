@@ -24,25 +24,31 @@ const customerSchema = new mongoose.Schema({
         required: [true, 'A customer must have a password'],
     },
     address: {
-        type: [addressSchema]
+        type: [addressSchema],
+        default: []
     },
     wishlist: {
-        type: [mongoose.Schema.Types.ObjectId]
+        type: [mongoose.Schema.Types.ObjectId],
+        ref: 'Product',
+        default: []
     },
     previous_orders: {
-        type: [mongoose.Schema.Types.ObjectId]
+        type: [mongoose.Schema.Types.ObjectId],
+        ref: 'Order',
+        default: []
     },
     cart:{
-        type: [mongoose.Schema.Types.ObjectId]
-    },
-    latest_viewed: {
-        type: [mongoose.Schema.Types.ObjectId]
+        type: [mongoose.Schema.Types.ObjectId],
+        ref: 'Product',
+        default: []
     },
     saved_cards:{
         type: [cardSchema]
     },
     feedbacks: {
-        type: [mongoose.Schema.Types.ObjectId]
+        type: [mongoose.Schema.Types.ObjectId],
+        ref: 'Review',
+        default: []
     },
     created_date: {
         type: Date,

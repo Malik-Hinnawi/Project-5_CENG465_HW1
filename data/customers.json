@@ -1,10 +1,10 @@
 [{
     "customer_id": 1111,
-    "first_name ": "",
-    "last_name": "",
-    "email": "",
-    "mobile": "",
-    "password": "",
+    "first_name": "Test",
+    "last_name": "Test",
+    "email": "a@gmail.com",
+    "mobile": "+905517008184",
+    "password": "123456",
     "addresses": [
         {
             "address_name": "Home",
@@ -23,48 +23,11 @@
             "postal_code": 10010
         }
     ],
-    "wishlist": [
-        {
-            "product_id": 56786
-        },
-        {
-            "product_id": 56786
-        }
-    ],
-    "previous_orders": [
-        {
-            "order_id": 56786
-        },
-        {
-            "order_id": 56786
-        }
-    ],
-    "cart": [
-        {
-            "product_id": "1321313"
-        },
-        {
-            "product_id": "1321313"
-        }
-    ],
-    "latest_viewed": [
-        {
-            "product_id": "1321313"
-        },
-        {
-            "product_id": "1321313"
-        }
-    ],
     "saved_card": [
         {
-            "card_number": "",
-            "expiry_date": "MM/YYYY",
-            "cvv": ""
-        }
-    ],
-    "feedbacks" : [
-        {
-            "review_id": 2134
+            "card_number": "1111111111111111",
+            "expiry_date": "02/2024",
+            "cvv": "332"
         }
     ]
 }]
