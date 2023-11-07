@@ -53,11 +53,7 @@ const customerSchema = new mongoose.Schema({
     },
     modified_date: {
         type: Date,
-        default: Date.now,
-        required: true,
     }
 });
 
-const Customer = mongoose.model('Customer', customerSchema);
-
-module.exports = Customer;
+module.exports = customerSchema;
