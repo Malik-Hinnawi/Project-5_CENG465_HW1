@@ -22,7 +22,7 @@ const customerSchema = new mongoose.Schema({
         type: String,
         required: [true, 'A customer must have a password'],
     },
-    address: {
+    addresses: {
         type: [addressSchema],
         default: []
     },

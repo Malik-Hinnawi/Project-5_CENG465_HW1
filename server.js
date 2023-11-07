@@ -29,7 +29,7 @@ mongoose.connect(uri)
         const Review = mongoose.model('Review', reviewSchema);
         const Payment = mongoose.model('Payment', paymentSchema);
 
-        // insert data
+        // Queries for inserting information to your database.
         await Customer.insertMany(customers)
             .then(() => console.log('Customers inserted successfully'))
             .catch(err => console.log(err));
@@ -50,9 +50,37 @@ mongoose.connect(uri)
             .then(() => console.log('Payments inserted successfully'))
             .catch(err => console.log(err));
 
-        // queries
-        await Customer.find()
-            .then(customers => console.log(customers))
+        /*
+            Queries
+        */
+        // Update and change one customer’s address,
+        await Customer.findOneAndUpdate({ "first_name": "Test", "addresses.address_name": "Home" }, { $set: {"addresses.$.city": "Istanbul"} }, { new: true })
+            .then(customer => console.log("Customer address updated", customer))
+            .catch(err => console.log(err));
+
+        // Update and change another customer’s password.
+        await Customer.findOneAndUpdate({ "first_name": "Test" }, { password: "123456" }, { new: true })
+            .then(customer => console.log("Customer password updated", customer))
+            .catch(err => console.log(err));
+
+        //  A query should retrieve past orders.
+        await Order.find()
+            .then(orders => console.log("Past orders", orders))
+            .catch(err => console.log(err));
+
+        // A query should retrieve product with specific review rating.
+        await Product.find({ rating: 5 })
+            .then(products => console.log("Specific review rating with product", products))
+            .catch(err => console.log(err));
+
+        //  A query for deleting one product completely. 
+        // (Delete the product record and then write a query to see if the product no longer exists.)
+        await Product.deleteOne({ name: "Samsung Galaxy S20" })
+            .then(() => console.log('Product deleted successfully'))
+            .catch(err => console.log(err));
+
+        await Product.find({ name: "Samsung Galaxy S20" })
+            .then(products => console.log(products))
             .catch(err => console.log(err));
 
         // connection close
