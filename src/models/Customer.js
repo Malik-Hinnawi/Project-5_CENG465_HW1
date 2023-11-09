@@ -22,7 +22,7 @@ const customerSchema = new mongoose.Schema({
         type: String,
         required: [true, 'A customer must have a password'],
     },
-    address: {
+    addresses: {
         type: [addressSchema],
         default: []
     },
@@ -53,11 +53,7 @@ const customerSchema = new mongoose.Schema({
     },
     modified_date: {
         type: Date,
-        default: Date.now,
-        required: true,
     }
 });
 
-const Customer = mongoose.model('Customer', customerSchema);
-
-module.exports = Customer;
+module.exports = customerSchema;

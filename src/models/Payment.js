@@ -23,11 +23,7 @@ const paymentSchema = new mongoose.Schema({
     },
     modified_date: {
         type: Date,
-        default: Date.now,
-        required: true
     }
 });
 
-const Payment = mongoose.model('Payment', paymentSchema);
-
-module.exports = Payment;
+module.exports = paymentSchema;

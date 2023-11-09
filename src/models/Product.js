@@ -37,7 +37,6 @@ const productSchema = new mongoose.Schema({
     },
     modified_date: {
         type: Date,
-        default: Date.now
     },
     overall_rating: {
         type: Number,
@@ -55,6 +54,4 @@ productSchema.pre('save', function (next) {
     next();
 });
 
-const Product = mongoose.model('Product', productSchema);
-
-module.exports = Product;
+module.exports = productSchema;

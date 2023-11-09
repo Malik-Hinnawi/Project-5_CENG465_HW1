@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 const shippingSchema = require('../models/Shipping');
-const cardSchema = require("../models/Card");
 
 const orderSchema = new mongoose.Schema({
     customerId: {
@@ -49,8 +48,6 @@ const orderSchema = new mongoose.Schema({
     },
     modified_date: {
         type: Date,
-        default: Date.now,
-        required: true,
     }
 });
 
@@ -59,6 +56,4 @@ orderSchema.pre('save', function (next) {
     next();
 });
 
-const Order = mongoose.model('Order', orderSchema);
-
-module.exports = Order;
+module.exports = orderSchema;
