@@ -59,7 +59,7 @@ mongoose.connect(uri)
             .catch(err => console.log(err));
 
         // Update and change another customer’s password.
-        await Customer.findOneAndUpdate({ "first_name": "Test" }, { password: "123456" }, { new: true })
+        await Customer.findOneAndUpdate({ "first_name": "Test" }, { password: "d4541250b586296fcce5dea4463ae17f" }, { new: true })
             .then(customer => console.log("Customer password updated", customer))
             .catch(err => console.log(err));
 

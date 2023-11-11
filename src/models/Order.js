@@ -9,7 +9,8 @@ const orderSchema = new mongoose.Schema({
     order_date: {
         type: Date,
         default: Date.now,
-        required: true
+        required: true,
+        index: true
     },
     status: {
         type: String
