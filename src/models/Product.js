@@ -4,7 +4,8 @@ const feedbackSchema = require("./Feedback");
 const productSchema = new mongoose.Schema({
     name: {
         type: String,
-        required: true
+        required: true,
+        index : true
     },
     description: {
         type: String,

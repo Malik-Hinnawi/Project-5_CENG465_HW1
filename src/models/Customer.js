@@ -3,7 +3,7 @@ const addressSchema = require('./Address')
 const validator = require('validator');
 
 const customerSchema = new mongoose.Schema({
-    first_name: {
+    first_name: { 
         type: String,
         required: [true, 'A customer must have a first name'],
         trim: true
@@ -17,6 +17,7 @@ const customerSchema = new mongoose.Schema({
         type: String,
         validate: [validator.default.isEmail, 'email entered is invlid'],
         required: [true, 'A customer must have an email'],
+        unique: true
     },
     password:{
         type: String,
@@ -29,7 +30,8 @@ const customerSchema = new mongoose.Schema({
     wishlist: {
         type: [mongoose.Schema.Types.ObjectId],
         ref: 'Product',
-        default: []
+        default: [],
+        index: true
     },
     previous_orders: {
         type: [mongoose.Schema.Types.ObjectId],
