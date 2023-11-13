@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const feedbackSchema = require("./Feedback");
+const reviewSchema = require('./Review');
 
 const productSchema = new mongoose.Schema({
     name: {
@@ -23,8 +23,8 @@ const productSchema = new mongoose.Schema({
         type: Number,
         required: true
     },
-    feedbacks: {
-        type: [feedbackSchema],
+    reviews: {
+        type: [reviewSchema],
         default: [],
     },
     created_date: {
@@ -42,9 +42,9 @@ const productSchema = new mongoose.Schema({
 
 
 productSchema.pre('save', function (next) {
-    const feedbackCount = this.feedbacks.length;
+    const feedbackCount = this.reviews.length;
     if (feedbackCount > 0) {
-        const totalRating = this.feedbacks.reduce((total, feedback) => total + feedback.rating, 0);
+        const totalRating = this.reviews.reduce((total, feedback) => total + feedback.rating, 0);
         this.overall_rating = totalRating / feedbackCount;
     }
     next();

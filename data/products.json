@@ -7,7 +7,7 @@
     "price": 999,
     "stock_amount": 49559,
     "overall_rating": 0,
-    "feedbacks": [],
+    "reviews": [],
     "created_date": "2020-01-03T05:05:39",
     "modified_date": null,
     "__v": 0
@@ -20,7 +20,7 @@
     "price": 79,
     "stock_amount": 69584,
     "overall_rating": 0,
-    "feedbacks": [],
+    "reviews": [],
     "created_date": "2021-08-30T14:20:34",
     "modified_date": null,
     "__v": 0
@@ -33,7 +33,7 @@
     "price": 169,
     "stock_amount": 58485,
     "overall_rating": 0,
-    "feedbacks": [],
+    "reviews": [],
     "created_date": "2023-10-24T00:59:44",
     "modified_date": null,
     "__v": 0
@@ -46,7 +46,7 @@
     "price": 299,
     "stock_amount": 1226,
     "overall_rating": 0,
-    "feedbacks": [],
+    "reviews": [],
     "created_date": "2019-09-19T15:51:12",
     "modified_date": null,
     "__v": 0
@@ -59,7 +59,7 @@
     "price": 149,
     "stock_amount": 84551,
     "overall_rating": 0,
-    "feedbacks": [],
+    "reviews": [],
     "created_date": "2021-08-30T15:54:27",
     "modified_date": null,
     "__v": 0
@@ -72,7 +72,7 @@
     "price": 499,
     "stock_amount": 76531,
     "overall_rating": 0,
-    "feedbacks": [],
+    "reviews": [],
     "created_date": "2019-07-25T12:11:34",
     "modified_date": null,
     "__v": 0
@@ -85,7 +85,7 @@
     "price": 299,
     "stock_amount": 55348,
     "overall_rating": 0,
-    "feedbacks": [],
+    "reviews": [],
     "created_date": "2022-09-16T18:09:32",
     "modified_date": null,
     "__v": 0
@@ -98,7 +98,7 @@
     "price": 89,
     "stock_amount": 93348,
     "overall_rating": 0,
-    "feedbacks": [],
+    "reviews": [],
     "created_date": "2019-11-09T00:59:23",
     "modified_date": null,
     "__v": 0
@@ -111,7 +111,7 @@
     "price": 299,
     "stock_amount": 14452,
     "overall_rating": 0,
-    "feedbacks": [],
+    "reviews": [],
     "created_date": "2023-10-04T00:14:19",
     "modified_date": null,
     "__v": 0
@@ -124,7 +124,7 @@
     "price": 699,
     "stock_amount": 37191,
     "overall_rating": 0,
-    "feedbacks": [],
+    "reviews": [],
     "created_date": "2018-06-03T21:26:40",
     "modified_date": null,
     "__v": 0

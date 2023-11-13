@@ -72,6 +72,11 @@ mongoose.connect(uri)
             await Review.insertMany(reviews)
             console.log('Review inserted successfully');
 
+            dbProducts.forEach(product => {
+                product.reviews.push(...reviews.filter(review => review.product_id == product._id))
+                product.save()
+            })
+
             payments.forEach((payment, index) => {
                 payment.order_id = dbOrders[index]._id
             })
@@ -79,10 +84,10 @@ mongoose.connect(uri)
             await Payment.insertMany(payments)
             console.log('Payment inserted successfully');
 
-             // Adding to cart:
-             try {
+            // Adding to cart:
+            try {
                 const customer = await Customer.findOne({ first_name: "Aaliyah" });
-                const product = await Product.findOne({name: "Laptop", brand: "Dell"})
+                const product = await Product.findOne({ name: "Laptop", brand: "Dell" })
                 const quantity = 2;
                 const cartItem = {
                     product: product,
@@ -93,13 +98,13 @@ mongoose.connect(uri)
                 await customer.save();
 
                 console.log("Successfully added to cart")
-            }catch(err){
+            } catch (err) {
                 console.log(err)
             }
 
             try {
                 const customer = await Customer.findOne({ first_name: "Evelyn" });
-                const product = await Product.findOne({name: "Laptop", brand: "Dell"})
+                const product = await Product.findOne({ name: "Laptop", brand: "Dell" })
                 const quantity = 2;
                 const cartItem = {
                     product: product,
@@ -110,17 +115,17 @@ mongoose.connect(uri)
                 await customer.save();
 
                 console.log("Successfully added to cart")
-            }catch(err){
+            } catch (err) {
                 console.log(err)
             }
-            
+
             // Adding to previously ordered:
             try {
                 const customer = await Customer.findOne({ first_name: "Aaliyah" });
-            
+
                 const cart = customer.cart;
                 customer.cart = [];
-            
+
                 const order = await Order.create({
                     customerId: customer._id,
                     status: "Pending",
@@ -136,9 +141,9 @@ mongoose.connect(uri)
                         price: cartItem.product.price * cartItem.quantity,
                     })),
                 });
-            
+
                 customer.previous_orders.push(order);
-            
+
                 await customer.save();
             } catch (err) {
                 console.error(err);
@@ -149,13 +154,13 @@ mongoose.connect(uri)
             */
 
             // Update and change one customer’s address,
-            await Customer.findOneAndUpdate({ "first_name": "Test", "addresses.address_name": "Home" }, { $set: { "addresses.$.city": "Istanbul" } }, { new: true })
-                .then(customer => console.log("Customer address updated", customer))
+            await Customer.findOneAndUpdate({ "email": "Aaliyah.Brown@example.com", "addresses.address_name": "Office" }, { $set: { "addresses.$.city": "Istanbul" } }, { new: true })
+                .then(customer => console.log("Customer address updated"))
                 .catch(err => console.log(err));
 
             // Update and change another customer’s password.
-            await Customer.findOneAndUpdate({ "first_name": "Test" }, { password: "d4541250b586296fcce5dea4463ae17f" }, { new: true })
-                .then(customer => console.log("Customer password updated", customer))
+            await Customer.findOneAndUpdate({ "email": "Evelyn.Brown@yahoo.com" }, { password: "d4541250b586296fcce5dea4463ae17f" }, { new: true })
+                .then(customer => console.log("Customer password updated"))
                 .catch(err => console.log(err));
 
             //  A query should retrieve past orders.
@@ -164,22 +169,22 @@ mongoose.connect(uri)
                 .catch(err => console.log(err));
 
             // A query should retrieve product with specific review rating.
-            await Product.find({ rating: 5 })
+            await Product.find({ overall_rating: 5 })
                 .then(products => console.log("Specific review rating with product", products))
                 .catch(err => console.log(err));
 
             //  A query for deleting one product completely. 
             // (Delete the product record and then write a query to see if the product no longer exists.)
-            await Product.deleteOne({ name: "Samsung Galaxy S20" })
+            await Product.deleteOne({ name: "Laptop" })
                 .then(() => console.log('Product deleted successfully'))
                 .catch(err => console.log(err));
 
-            await Product.find({ name: "Samsung Galaxy S20" })
+            await Product.find({ name: "Laptop" })
                 .then(products => console.log(products))
                 .catch(err => console.log(err));
 
-           
-            
+
+
 
             /* 
             Index Comparison
@@ -187,9 +192,7 @@ mongoose.connect(uri)
 
             // Product name before indexing
             console.time("product_name")
-            await Product.find({ name: "Samsung Galaxy S20" })
-                .then(products => console.log(products))
-                .catch(err => console.log(err));
+            await Product.find({ name: "External SSD" })
             console.timeEnd("product_name")
 
             // Product name after indexing
@@ -198,16 +201,12 @@ mongoose.connect(uri)
                 .catch(err => console.log(err));
 
             console.time("product_name_index")
-            await Product.find({ name: "Samsung Galaxy S20" })
-                .then(products => console.log(products))
-                .catch(err => console.log(err));
+            await Product.find({ name: "External SSD" })
             console.timeEnd("product_name_index")
 
             // All Wishlist specific customer before indexing
             console.time("wishlist")
-            await Customer.find({ "first_name": "Test" }, { wishlist: 1 })
-                .then(customer => console.log(customer))
-                .catch(err => console.log(err));
+            await Customer.find({ "email": "Evelyn.Brown@yahoo.com" }, { wishlist: 1 })
             console.timeEnd("wishlist")
 
             // Wishlist after indexing
@@ -216,46 +215,35 @@ mongoose.connect(uri)
                 .catch(err => console.log(err));
 
             console.time("wishlist_index")
-            await Customer.find({ "first_name": "Test" }, { wishlist: 1 })
-                .then(customer => console.log(customer))
-                .catch(err => console.log(err));
+            await Customer.find({ "email": "Evelyn.Brown@yahoo.com" }, { wishlist: 1 })
             console.timeEnd("wishlist_index")
 
-            // order_dates before exact date before indexing
+            // order_dates before indexing
             console.time("order_dates")
-            await Order.find({ order_date: { $gte: new Date("2020-01-01"), $lt: new Date("2020-01-02") } })
-                .then(orders => console.log(orders))
-                .catch(err => console.log(err));
+            await Order.find({})
             console.timeEnd("order_dates")
 
-            // order_dates after exact date after indexing
-            
+            // order_date after indexing
             await Order.createIndexes({ order_date: 1 })
                 .then(() => console.log('Order date index created successfully'))
                 .catch(err => console.log(err));
-           
+
 
             console.time("order_dates_index")
-            await Order.find({ order_date: { $gte: new Date("2020-01-01"), $lt: new Date("2020-01-02") } })
-                .then(orders => console.log(orders))
-                .catch(err => console.log(err));
+            await Order.find({})
             console.timeEnd("order_dates_index")
 
             console.time("price")
-            await Product.find({ "name": "Soundbar" }, { price: 199 })
-                .then(product => console.log(product))
-                .catch(err => console.log(err));
+            await Product.find({ price: 699 })
             console.timeEnd("price")
 
-           
+
             await Product.createIndexes({ price: 1 })
                 .then(() => console.log('price index created successfully'))
                 .catch(err => console.log(err));
-            
+
             console.time("price_index")
-            await Product.find({ "name": "Soundbar" }, { price: 199 })
-                .then(product => console.log(product))
-                .catch(err => console.log(err));
+            await Product.find({ price: 699 })
             console.timeEnd("price_index")
 
             mongoose.connection.close();
