@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
-const addressSchema = require('./Address')
+const addressSchema = require('./Address');
+const productSchema = require('./Product');
 const validator = require('validator');
 const orderSchema = require('./Order');
 
@@ -35,8 +36,19 @@ const customerSchema = new mongoose.Schema({
     },
     previous_orders: [orderSchema],
     cart: {
-        type: [mongoose.Schema.Types.ObjectId],
-        ref: 'Product',
+        type: [new mongoose.Schema(
+            {
+            product: {
+                type: productSchema,
+            },
+            quantity: {
+                type: Number,
+                min: 0
+            }
+            }
+        )
+        ],
+       
         default: []
     },
     created_date: {
