@@ -7,9 +7,45 @@
     },
     {
         "order_id": "",
+        "payment_method": "credit",
+        "transaction_date": "05/11/2022",
+        "installment_option": "multiple-installments"
+    },
+    {
+        "order_id": "",
         "payment_method": "debit",
-        "transaction_date": "05/11/2023",
+        "transaction_date": "06/11/2023",
+        "installment_option": "multiple-installments"
+    },
+    {
+        "order_id": "",
+        "payment_method": "credit",
+        "transaction_date": "08/11/2023",
         "installment_option": "one-installment"
+    },
+    {
+        "order_id": "",
+        "payment_method": "debit",
+        "transaction_date": "01/01/2023",
+        "installment_option": "multiple-installments"
+    },
+    {
+        "order_id": "",
+        "payment_method": "credit",
+        "transaction_date": "05/10/2023",
+        "installment_option": "multiple-installments"
+    },
+    {
+        "order_id": "",
+        "payment_method": "debit",
+        "transaction_date": "05/05/2023",
+        "installment_option": "one-installment"
+    },
+    {
+        "order_id": "",
+        "payment_method": "credit",
+        "transaction_date": "05/06/2023",
+        "installment_option": "multiple-installments"
     },
     {
         "order_id": "",
@@ -19,14 +55,8 @@
     },
     {
         "order_id": "",
-        "payment_method": "debit",
-        "transaction_date": "05/11/2023",
-        "installment_option": "one-installment"
-    },
-    {
-        "order_id": "",
-        "payment_method": "debit",
-        "transaction_date": "05/11/2023",
-        "installment_option": "one-installment"
+        "payment_method": "cash",
+        "transaction_date": "05/07/2023",
+        "installment_option": "multiple-installments"
     }
 ]

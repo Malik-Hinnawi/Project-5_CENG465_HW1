@@ -81,8 +81,8 @@ mongoose.connect(uri)
 
              // Adding to cart:
              try {
-                const customer = await Customer.findOne({ first_name: "Nathan" });
-                const product = await Product.findOne({name: "Soundbar", brand: "Bose"})
+                const customer = await Customer.findOne({ first_name: "Aaliyah" });
+                const product = await Product.findOne({name: "Laptop", brand: "Dell"})
                 const quantity = 2;
                 const cartItem = {
                     product: product,
@@ -98,8 +98,8 @@ mongoose.connect(uri)
             }
 
             try {
-                const customer = await Customer.findOne({ first_name: "Tyler" });
-                const product = await Product.findOne({name: "Soundbar", brand: "Bose"})
+                const customer = await Customer.findOne({ first_name: "Evelyn" });
+                const product = await Product.findOne({name: "Laptop", brand: "Dell"})
                 const quantity = 2;
                 const cartItem = {
                     product: product,
@@ -116,7 +116,7 @@ mongoose.connect(uri)
             
             // Adding to previously ordered:
             try {
-                const customer = await Customer.findOne({ first_name: "Nathan" });
+                const customer = await Customer.findOne({ first_name: "Aaliyah" });
             
                 const cart = customer.cart;
                 customer.cart = [];

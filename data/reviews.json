@@ -9,29 +9,64 @@
     {
         "product_id": "",
         "customer_name": "",
-        "comment": "This product is amazing",
+        "comment": "This product is beyond amazing",
         "rating": 5,
-        "time": "14:30"
+        "time": "15:30"
     },
     {
         "product_id": "",
         "customer_name": "",
-        "comment": "This product is amazing",
+        "comment": "This product is amazing X10",
         "rating": 5,
-        "time": "14:30"
+        "time": "16:30"
     },
     {
         "product_id": "",
         "customer_name": "",
-        "comment": "This product is amazing",
+        "comment": "This product is okey",
         "rating": 3,
-        "time": "14:30"
+        "time": "19:30"
+    },
+    {
+        "product_id": "",
+        "customer_name": "",
+        "comment": "This product is average",
+        "rating": 3.5,
+        "time": "20:30"
+    },
+    {
+        "product_id": "",
+        "customer_name": "",
+        "comment": "This product is amazing, but it has one small problem.",
+        "rating": 3.6,
+        "time": "21:30"
     },
     {
         "product_id": "",
         "customer_name": "",
         "comment": "This product is amazing",
-        "rating": 3.5,
-        "time": "14:30"
+        "rating": 4.5,
+        "time": "22:30"
+    },
+    {
+        "product_id": "",
+        "customer_name": "",
+        "comment": "This product is poor",
+        "rating": 2.5,
+        "time": "23:30"
+    },
+    {
+        "product_id": "",
+        "customer_name": "",
+        "comment": "This product is amazing",
+        "rating": 3.7,
+        "time": "00:30"
+    },
+    {
+        "product_id": "",
+        "customer_name": "",
+        "comment": "This product is well it could be better but it is good none the less",
+        "rating": 3.9,
+        "time": "19:30"
     }
 ]
