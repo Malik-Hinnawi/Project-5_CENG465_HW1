@@ -1,9 +1,10 @@
 const mongoose = require('mongoose');
 const addressSchema = require('./Address')
 const validator = require('validator');
+const orderSchema = require('./Order');
 
 const customerSchema = new mongoose.Schema({
-    first_name: { 
+    first_name: {
         type: String,
         required: [true, 'A customer must have a first name'],
         trim: true
@@ -19,7 +20,7 @@ const customerSchema = new mongoose.Schema({
         required: [true, 'A customer must have an email'],
         unique: true
     },
-    password:{
+    password: {
         type: String,
         required: [true, 'A customer must have a password'],
     },
@@ -31,21 +32,11 @@ const customerSchema = new mongoose.Schema({
         type: [mongoose.Schema.Types.ObjectId],
         ref: 'Product',
         default: [],
-        index: true
     },
-    previous_orders: {
-        type: [mongoose.Schema.Types.ObjectId],
-        ref: 'Order',
-        default: []
-    },
-    cart:{
+    previous_orders: [orderSchema],
+    cart: {
         type: [mongoose.Schema.Types.ObjectId],
         ref: 'Product',
-        default: []
-    },
-    feedbacks: {
-        type: [mongoose.Schema.Types.ObjectId],
-        ref: 'Review',
         default: []
     },
     created_date: {

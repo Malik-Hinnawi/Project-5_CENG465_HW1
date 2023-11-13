@@ -1,7 +1,37 @@
-[{
-    "product_id": "65488eeab9cb848a6d277104",
-    "customer_name": "Test",
-    "comment": "This product is amazing",
-    "rating": 4.1,
-    "time": "14:30"
-}]
+[
+    {
+        "product_id": "",
+        "customer_name": "",
+        "comment": "This product is amazing",
+        "rating": 4.1,
+        "time": "14:30"
+    },
+    {
+        "product_id": "",
+        "customer_name": "",
+        "comment": "This product is amazing",
+        "rating": 5,
+        "time": "14:30"
+    },
+    {
+        "product_id": "",
+        "customer_name": "",
+        "comment": "This product is amazing",
+        "rating": 5,
+        "time": "14:30"
+    },
+    {
+        "product_id": "",
+        "customer_name": "",
+        "comment": "This product is amazing",
+        "rating": 3,
+        "time": "14:30"
+    },
+    {
+        "product_id": "",
+        "customer_name": "",
+        "comment": "This product is amazing",
+        "rating": 3.5,
+        "time": "14:30"
+    }
+]

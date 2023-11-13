@@ -16,14 +16,10 @@ const paymentSchema = new mongoose.Schema({
         required: true,
         default: Date.now
     },
-    created_date: {
-        type: Date,
-        default: Date.now,
-        required: true
+    installment_option: {
+        type: String,
+        enum: ["one-installment", "multiple-installments"]
     },
-    modified_date: {
-        type: Date,
-    }
 });
 
 module.exports = paymentSchema;

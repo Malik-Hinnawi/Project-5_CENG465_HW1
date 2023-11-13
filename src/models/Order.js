@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const shippingSchema = require('../models/Shipping');
+const productSchema = require('../models/Product')
 
 const orderSchema = new mongoose.Schema({
     customerId: {
@@ -10,7 +11,6 @@ const orderSchema = new mongoose.Schema({
         type: Date,
         default: Date.now,
         required: true,
-        index: true
     },
     status: {
         type: String
@@ -18,11 +18,10 @@ const orderSchema = new mongoose.Schema({
     shipping: {
         type: shippingSchema
     },
-    products: {
-        type: [{
-            product_id: {
-                type: mongoose.Schema.Types.ObjectId,
-                ref: 'Product'
+    products: [
+        {
+            product: {
+                type: productSchema,
             },
             quantity: {
                 type: Number,
@@ -32,15 +31,11 @@ const orderSchema = new mongoose.Schema({
                 type: Number,
                 min: 0
             }
-        }]
-    },
+        }
+    ],
     total_price: {
         type: Number,
         default: 0,
-    },
-    order_type: {
-        type: String,
-        enum: ["one-installment", "multiple-installments"] 
     },
     created_date: {
         type: Date,
