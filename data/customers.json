@@ -1,33 +1,117 @@
-[{
-    "customer_id": 1111,
-    "first_name": "Test",
-    "last_name": "Test",
-    "email": "a@gmail.com",
-    "mobile": "+905517008184",
-    "password": "123456",
-    "addresses": [
-        {
-            "address_name": "Home",
-            "street": "588 5th Street",
-            "city": "Brooklyn",
-            "state": "NY",
-            "country": "United States",
-            "postal_code": 11215
-        },
-        {
-            "address_name": "Work",
-            "street": "1 E. 23rd Street",
-            "city": "New York",
-            "state": "NY",
-            "country": "United States",
-            "postal_code": 10010
-        }
-    ],
-    "saved_card": [
-        {
-            "card_number": "1111111111111111",
-            "expiry_date": "02/2024",
-            "cvv": "332"
-        }
-    ]
-}]
+[
+    {
+        "first_name": "Nathan",
+        "last_name": "Henderson",
+        "mobile": "+9051234323",
+        "email": "Nathan.Henderson@yahoo.com",
+        "password": 37926,
+        "addresses": [
+            {
+                "address_name": "Apartment",
+                "street": "Mulberry Lane",
+                "city": "Mesa",
+                "state": "Ohio",
+                "country": "Barbados",
+                "postal_code": 97335
+            }
+        ],
+        "wishlist": [],
+        "previous_orders": [],
+        "cart": [],
+        "feedbacks": [],
+        "created_date": "2023-11-12T10:44:43.130552",
+        "__v": 0
+    },
+    {
+        "first_name": "Tyler",
+        "last_name": "Powell",
+        "mobile": "+9051234323",
+        "email": "Tyler.Powell@example.com",
+        "password": 26222,
+        "addresses": [
+            {
+                "address_name": "Suite",
+                "street": "Chestnut Circle",
+                "city": "Detroit",
+                "state": "Georgia",
+                "country": "Malawi",
+                "postal_code": 33101
+            }
+        ],
+        "wishlist": [],
+        "previous_orders": [],
+        "cart": [],
+        "feedbacks": [],
+        "created_date": "2023-11-12T10:44:43.130552",
+        "__v": 0
+    },
+    {
+        "first_name": "Avery",
+        "last_name": "Gonzalez",
+        "mobile": "+9051234323",
+        "email": "Avery.Gonzalez@gmail.com",
+        "password": 56981,
+        "addresses": [
+            {
+                "address_name": "Suite",
+                "street": "Xanthoceras Circle",
+                "city": "Stockton",
+                "state": "Maine",
+                "country": "Niger",
+                "postal_code": 38639
+            }
+        ],
+        "wishlist": [],
+        "previous_orders": [],
+        "cart": [],
+        "feedbacks": [],
+        "created_date": "2023-11-12T10:44:43.130552",
+        "__v": 0
+    },
+    {
+        "first_name": "Penelope",
+        "last_name": "Bailey",
+        "mobile": "+9051234323",
+        "email": "Penelope.Bailey@hotmail.com",
+        "password": 74018,
+        "addresses": [
+            {
+                "address_name": "Home",
+                "street": "Acacia Avenue",
+                "city": "Riverside",
+                "state": "Nebraska",
+                "country": "Zimbabwe",
+                "postal_code": 67653
+            }
+        ],
+        "wishlist": [],
+        "previous_orders": [],
+        "cart": [],
+        "feedbacks": [],
+        "created_date": "2023-11-12T10:44:43.130552",
+        "__v": 0
+    },
+    {
+        "first_name": "Jackson",
+        "last_name": "Cox",
+        "mobile": "+9051234323",
+        "email": "Jackson.Cox@hotmail.com",
+        "password": 51316,
+        "addresses": [
+            {
+                "address_name": "Work",
+                "street": "Ginkgo Place",
+                "city": "Riverside",
+                "state": "New York",
+                "country": "Bahrain",
+                "postal_code": 98429
+            }
+        ],
+        "wishlist": [],
+        "previous_orders": [],
+        "cart": [],
+        "feedbacks": [],
+        "created_date": "2023-11-12T10:44:43.130552",
+        "__v": 0
+    }
+]

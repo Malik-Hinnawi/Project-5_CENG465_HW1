@@ -1,5 +1,32 @@
-[{
-    "payment_id": "6449645798",
-    "order_id": "65488c7aa7de79601d9659f7",
-    "payment_method": "debit"
-}]
+[
+    {
+        "order_id": "",
+        "payment_method": "debit",
+        "transaction_date": "05/11/2023",
+        "installment_option": "one-installment"
+    },
+    {
+        "order_id": "",
+        "payment_method": "debit",
+        "transaction_date": "05/11/2023",
+        "installment_option": "one-installment"
+    },
+    {
+        "order_id": "",
+        "payment_method": "debit",
+        "transaction_date": "05/11/2023",
+        "installment_option": "one-installment"
+    },
+    {
+        "order_id": "",
+        "payment_method": "debit",
+        "transaction_date": "05/11/2023",
+        "installment_option": "one-installment"
+    },
+    {
+        "order_id": "",
+        "payment_method": "debit",
+        "transaction_date": "05/11/2023",
+        "installment_option": "one-installment"
+    }
+]

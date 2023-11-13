@@ -1,9 +1,80 @@
-[{
-    "name": "Samsung 860 EVO 1 TB Internal",
-    "description": "It is a phone",
-    "brand": "Samsung",
-    "photo_id": 123213321, 
-    "quantity": 5,
-    "price": 99,
-    "stock_amount": 12
-}]
+[
+    {
+        "name": "Fitness Equipment",
+        "description": "Tools for physical exercise",
+        "brand": "Bowflex",
+        "photo_id": 57458,
+        "price": 199,
+        "stock_amount": 97182,
+        "overall_rating": 0,
+        "feedbacks": [],
+        "created_date": "2019-07-25T04:39:40",
+        "modified_date": null,
+        "__v": 0
+    },
+    {
+        "name": "Soundbar",
+        "description": "Enhanced TV audio",
+        "brand": "Bose",
+        "photo_id": 82935,
+        "price": 199,
+        "stock_amount": 6253,
+        "overall_rating": 0,
+        "feedbacks": [],
+        "created_date": "2022-06-04T14:51:15",
+        "modified_date": null,
+        "__v": 0
+    },
+    {
+        "name": "Drones",
+        "description": "Aerial photography fun",
+        "brand": "DJI",
+        "photo_id": 96160,
+        "price": 699,
+        "stock_amount": 47691,
+        "overall_rating": 0,
+        "feedbacks": [],
+        "created_date": "2018-05-18T10:04:27",
+        "modified_date": null,
+        "__v": 0
+    },
+    {
+        "name": "Smartphone",
+        "description": "High-tech communication",
+        "brand": "Samsung",
+        "photo_id": 5447,
+        "price": 699,
+        "stock_amount": 95273,
+        "overall_rating": 0,
+        "feedbacks": [],
+        "created_date": "2021-09-07T15:44:18",
+        "modified_date": null,
+        "__v": 0
+    },
+    {
+        "name": "Graphics Card",
+        "description": "Enhance gaming visuals",
+        "brand": "NVIDIA",
+        "photo_id": 51960,
+        "price": 499,
+        "stock_amount": 76998,
+        "overall_rating": 0,
+        "feedbacks": [],
+        "created_date": "2019-12-12T09:26:33",
+        "modified_date": null,
+        "__v": 0
+    },
+    {
+        "name": "Smartphone",
+        "description": "High-tech communication",
+        "brand": "Samsung",
+        "photo_id": 44044,
+        "price": 699,
+        "stock_amount": 70739,
+        "overall_rating": 0,
+        "feedbacks": [],
+        "created_date": "2021-11-11T21:48:50",
+        "modified_date": null,
+        "__v": 0
+    }
+]
