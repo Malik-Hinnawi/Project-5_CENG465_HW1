@@ -1,0 +1,202 @@
+[
+  {
+    "first_name": "Aaliyah",
+    "last_name": "Brown",
+    "email": "Aaliyah.Brown@example.com",
+    "password": "$2b$12$61VQ1pdwmuSkgRBvV37WQe3kLSBdv7V94VYBJAUG09o2dfsKhq0si",
+    "addresses": {
+      "address_name": "Office",
+      "street": "Birnam Wood",
+      "city": "Milwaukee",
+      "state": "Hawaii",
+      "country": "Central African Republic",
+      "postal_code": 99958
+    },
+    "wishlist": [],
+    "previous_orders": [],
+    "cart": [],
+    "feedbacks": [],
+    "created_date": "2023-11-13T16:34:58.544649",
+    "__v": 0
+  },
+  {
+    "first_name": "Jackson",
+    "last_name": "Ward",
+    "email": "Jackson.Ward@example.com",
+    "password": "$2b$12$OW0goB6wEz5097/GYPFQzOTL6r38sVzsaGsLf38kxmBGfHt73Ot/u",
+    "addresses": {
+      "address_name": "Suite",
+      "street": "Hickory Circle",
+      "city": "Albuquerque",
+      "state": "Idaho",
+      "country": "Cameroon",
+      "postal_code": 89543
+    },
+    "wishlist": [],
+    "previous_orders": [],
+    "cart": [],
+    "feedbacks": [],
+    "created_date": "2023-11-13T16:34:58.767568",
+    "__v": 0
+  },
+  {
+    "first_name": "Evelyn",
+    "last_name": "Brown",
+    "email": "Evelyn.Brown@yahoo.com",
+    "password": "$2b$12$n7iQwYj1kuC.R46s7o67puoYGFLSTTv7Z3N5ZWIJa.5TFJ.KdaqU6",
+    "addresses": {
+      "address_name": "Apartment",
+      "street": "Cypress Avenue",
+      "city": "San Antonio",
+      "state": "Tennessee",
+      "country": "Lebanon",
+      "postal_code": 84434
+    },
+    "wishlist": [],
+    "previous_orders": [],
+    "cart": [],
+    "feedbacks": [],
+    "created_date": "2023-11-13T16:34:58.978001",
+    "__v": 0
+  },
+  {
+    "first_name": "Victoria",
+    "last_name": "Carter",
+    "email": "Victoria.Carter@yahoo.com",
+    "password": "$2b$12$y4sbMuLwmPxJvGyuikDZ0ORtSZpupD1nZrdaJZ2L5LkrkB4i21wzW",
+    "addresses": {
+      "address_name": "Studio",
+      "street": "Wisteria Road",
+      "city": "Fort Worth",
+      "state": "Colorado",
+      "country": "Saint Kitts and Nevis",
+      "postal_code": 89786
+    },
+    "wishlist": [],
+    "previous_orders": [],
+    "cart": [],
+    "feedbacks": [],
+    "created_date": "2023-11-13T16:34:59.182614",
+    "__v": 0
+  },
+  {
+    "first_name": "Anthony",
+    "last_name": "Brooks",
+    "email": "Anthony.Brooks@gmail.com",
+    "password": "$2b$12$mDFY580Wa5dWE8ycfW1i9Oaw.H3qiMSUQ3zARimI1Fqz9x8KkU4JK",
+    "addresses": {
+      "address_name": "Apartment",
+      "street": "Hickory Circle",
+      "city": "Bakersfield",
+      "state": "Ohio",
+      "country": "Gambia",
+      "postal_code": 26843
+    },
+    "wishlist": [],
+    "previous_orders": [],
+    "cart": [],
+    "feedbacks": [],
+    "created_date": "2023-11-13T16:34:59.388471",
+    "__v": 0
+  },
+  {
+    "first_name": "Caleb",
+    "last_name": "Hill",
+    "email": "Caleb.Hill@gmail.com",
+    "password": "$2b$12$VLv/gWR.36ctrMefAiURNeQ43mkjl8zCOMtQyH5SNIwTBTSVJCr.O",
+    "addresses": {
+      "address_name": "Studio",
+      "street": "Alder Street",
+      "city": "Seattle",
+      "state": "Florida",
+      "country": "Tanzania",
+      "postal_code": 35525
+    },
+    "wishlist": [],
+    "previous_orders": [],
+    "cart": [],
+    "feedbacks": [],
+    "created_date": "2023-11-13T16:34:59.591120",
+    "__v": 0
+  },
+  {
+    "first_name": "Aiden",
+    "last_name": "Turner",
+    "email": "Aiden.Turner@yahoo.com",
+    "password": "$2b$12$1cMX7Tar5oGR7pDLIoJYUOreCxLsTt2RxXbAcPHlmIQQ9KJzJ/RN.",
+    "addresses": {
+      "address_name": "Office",
+      "street": "Redwood Boulevard",
+      "city": "Chicago",
+      "state": "Indiana",
+      "country": "Bolivia",
+      "postal_code": 80288
+    },
+    "wishlist": [],
+    "previous_orders": [],
+    "cart": [],
+    "feedbacks": [],
+    "created_date": "2023-11-13T16:34:59.794437",
+    "__v": 0
+  },
+  {
+    "first_name": "Matthew",
+    "last_name": "Long",
+    "email": "Matthew.Long@gmail.com",
+    "password": "$2b$12$URqVkfb9.SQqQwK.RRGJKeUz9zYkKrdD3ngq/nqXNrRbYlC/ZzvzW",
+    "addresses": {
+      "address_name": "Work",
+      "street": "Cedar Boulevard",
+      "city": "Raleigh",
+      "state": "Maine",
+      "country": "Samoa",
+      "postal_code": 29454
+    },
+    "wishlist": [],
+    "previous_orders": [],
+    "cart": [],
+    "feedbacks": [],
+    "created_date": "2023-11-13T16:34:59.996282",
+    "__v": 0
+  },
+  {
+    "first_name": "Isabella",
+    "last_name": "Sanchez",
+    "email": "Isabella.Sanchez@yahoo.com",
+    "password": "$2b$12$N8sWf0BwSqLfL8RdkY9HuOaXzpwC/2WcxhD5/CFpGjPuGg48Yjrem",
+    "addresses": {
+      "address_name": "Apartment",
+      "street": "Umbrella Pine Avenue",
+      "city": "Austin",
+      "state": "Washington",
+      "country": "Vanuatu",
+      "postal_code": 78601
+    },
+    "wishlist": [],
+    "previous_orders": [],
+    "cart": [],
+    "feedbacks": [],
+    "created_date": "2023-11-13T16:35:00.202255",
+    "__v": 0
+  },
+  {
+    "first_name": "Evan",
+    "last_name": "Martinez",
+    "email": "Evan.Martinez@example.com",
+    "password": "$2b$12$Mt/LZ8zZtvIGMU6HzeMn3OC.bEnIGtnKWS0i43T2qdILTS5uChRJm",
+    "addresses": {
+      "address_name": "Office",
+      "street": "Linden Lane",
+      "city": "Nashville",
+      "state": "Iowa",
+      "country": "Laos",
+      "postal_code": 59336
+    },
+    "wishlist": [],
+    "previous_orders": [],
+    "cart": [],
+    "feedbacks": [],
+    "created_date": "2023-11-13T16:35:00.405234",
+    "__v": 0
+  }
+]
