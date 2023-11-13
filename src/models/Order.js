@@ -33,10 +33,6 @@ const orderSchema = new mongoose.Schema({
             }
         }
     ],
-    total_price: {
-        type: Number,
-        default: 0,
-    },
     created_date: {
         type: Date,
         default: Date.now,
@@ -45,11 +41,6 @@ const orderSchema = new mongoose.Schema({
     modified_date: {
         type: Date,
     }
-});
-
-orderSchema.pre('save', function (next) {
-    this.total_price = this.products.reduce((total, product) => total + (product.price || 0), 0);
-    next();
 });
 
 module.exports = orderSchema;
