@@ -19,6 +19,7 @@ const orderSchema = new mongoose.Schema({
         type: shippingSchema
     },
     products: [
+       new mongoose.Schema(
         {
             product: {
                 type: productSchema,
@@ -32,6 +33,7 @@ const orderSchema = new mongoose.Schema({
                 min: 0
             }
         }
+       )
     ],
     created_date: {
         type: Date,

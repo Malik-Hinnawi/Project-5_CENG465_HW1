@@ -50,7 +50,7 @@ mongoose.connect(uri)
             // Modify orders data with customer and product references
             for (let i = 0; i < dbCustomers.length; i++) {
                 orders[i].customer_id = dbCustomers[i]._id;
-                orders[i].shipping.name = dbCustomers[i].first_name + " " + dbCustomers[i].last_name
+                orders[i].shipping.customer_name = dbCustomers[i].first_name + " " + dbCustomers[i].last_name
                 orders[i].shipping.address = dbCustomers[i].addresses[0];
                 orders[i].shipping.mobile = dbCustomers[i].mobile;
                 orders[i].products.push({ product: dbProducts[i], quantity: 5, price: 5 * dbProducts[i].price });
@@ -78,6 +78,71 @@ mongoose.connect(uri)
 
             await Payment.insertMany(payments)
             console.log('Payment inserted successfully');
+
+             // Adding to cart:
+             try {
+                const customer = await Customer.findOne({ first_name: "Nathan" });
+                const product = await Product.findOne({name: "Soundbar", brand: "Bose"})
+                const quantity = 2;
+                const cartItem = {
+                    product: product,
+                    quantity: quantity
+                };
+                customer.cart.push(cartItem);
+                customer.modified_date = new Date();
+                await customer.save();
+
+                console.log("Successfully added to cart")
+            }catch(err){
+                console.log(err)
+            }
+
+            try {
+                const customer = await Customer.findOne({ first_name: "Tyler" });
+                const product = await Product.findOne({name: "Soundbar", brand: "Bose"})
+                const quantity = 2;
+                const cartItem = {
+                    product: product,
+                    quantity: quantity
+                };
+                customer.cart.push(cartItem);
+                customer.modified_date = new Date();
+                await customer.save();
+
+                console.log("Successfully added to cart")
+            }catch(err){
+                console.log(err)
+            }
+            
+            // Adding to previously ordered:
+            try {
+                const customer = await Customer.findOne({ first_name: "Nathan" });
+            
+                const cart = customer.cart;
+                customer.cart = [];
+            
+                const order = await Order.create({
+                    customerId: customer._id,
+                    status: "Pending",
+                    shipping: {
+                        customer_name: customer.first_name + ' ' + customer.last_name,
+                        address: customer.addresses[0],
+                    },
+                    mobile: "+9051234323",
+                    company_name: "Aras Kargo",
+                    products: cart.map(cartItem => ({
+                        product: cartItem.product,
+                        quantity: cartItem.quantity,
+                        price: cartItem.product.price * cartItem.quantity,
+                    })),
+                });
+            
+                customer.previous_orders.push(order);
+            
+                await customer.save();
+            } catch (err) {
+                console.error(err);
+            }
 
             /*
                 Queries
@@ -113,9 +178,11 @@ mongoose.connect(uri)
                 .then(products => console.log(products))
                 .catch(err => console.log(err));
 
+           
+            
 
-            /*
-            * Index Comparison
+            /* 
+            Index Comparison
             */
 
             // Product name before indexing
@@ -162,12 +229,34 @@ mongoose.connect(uri)
             console.timeEnd("order_dates")
 
             // order_dates after exact date after indexing
-            console.time("order_dates_index")
+            
             await Order.createIndexes({ order_date: 1 })
                 .then(() => console.log('Order date index created successfully'))
                 .catch(err => console.log(err));
+           
+
+            console.time("order_dates_index")
+            await Order.find({ order_date: { $gte: new Date("2020-01-01"), $lt: new Date("2020-01-02") } })
+                .then(orders => console.log(orders))
+                .catch(err => console.log(err));
             console.timeEnd("order_dates_index")
 
+            console.time("price")
+            await Product.find({ "name": "Soundbar" }, { price: 199 })
+                .then(product => console.log(product))
+                .catch(err => console.log(err));
+            console.timeEnd("price")
+
+           
+            await Product.createIndexes({ price: 1 })
+                .then(() => console.log('price index created successfully'))
+                .catch(err => console.log(err));
+            
+            console.time("price_index")
+            await Product.find({ "name": "Soundbar" }, { price: 199 })
+                .then(product => console.log(product))
+                .catch(err => console.log(err));
+            console.timeEnd("price_index")
 
             mongoose.connection.close();
         } catch (error) {
